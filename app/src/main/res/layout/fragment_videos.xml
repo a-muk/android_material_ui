@@ -56,27 +56,27 @@
                         android:layout_marginEnd="9dp"
                         android:layout_marginBottom="9dp">
 
-<!--                        <VideoView-->
-<!--                            android:layout_alignParentTop="true"-->
-<!--                            android:layout_alignParentBottom="true"-->
-<!--                            android:layout_alignParentLeft="true"-->
-<!--                            android:layout_alignParentRight="true"-->
-<!--                            android:id="@+id/videoView"-->
-<!--                            android:layout_width="fill_parent"-->
-<!--                            android:layout_height="fill_parent"-->
-<!--                            android:layout_marginStart="9dp"-->
-<!--                            android:layout_marginTop="9dp"-->
-<!--                            android:layout_marginEnd="9dp"-->
-<!--                            android:layout_marginBottom="9dp"-->
-<!--                           /> -->
+                        <VideoView
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/videoview"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginEnd="9dp"
+                            android:layout_marginBottom="9dp"
+                           />
 
 
-                        <view
-                            android:id="@+id/view2"
-                            class="com.google.android.youtube.player.YouTubePlayerView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" />
+<!--                        <view-->
+<!--                            android:id="@+id/view2"-->
+<!--                            class="com.google.android.youtube.player.YouTubePlayerView"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1" />-->
                     </LinearLayout>
 
                 </LinearLayout>
@@ -86,8 +86,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="bottom"
                     android:text="Video Title"
+                    android:textAlignment="center"
                     android:textSize="34sp" />
 
                 <LinearLayout
@@ -102,7 +102,7 @@
                         android:orientation="horizontal">
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName2"
+                            android:id="@+id/writeComment"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
 
@@ -110,29 +110,43 @@
                             android:ems="10"
                             android:inputType="textPersonName"
 
-                            android:text="Name"
+                            android:text="Add Comment"
                             tools:ignore="TouchTargetSizeCheck" />
 
-                        <Button
-                            android:id="@+id/button2"
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/submit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.05"
-                            android:text="Publish" />
+                            android:src="@drawable/ic_baseline_add_24"
+                            />
+
+<!--                        <Button-->
+<!--                            android:id="@+id/submit"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="0.05"-->
+<!--                            android:text="Publish" />-->
                     </LinearLayout>
                 </LinearLayout>
-
-                <ScrollView
+                <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.3"
-                    tools:ignore="SpeakableTextPresentCheck">
+                    android:id="@+id/commentList"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:nestedScrollingEnabled="true"/>
+<!--                    to have linear layout inside of it-->
 
 
-                    <ListView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </ScrollView>
+<!--                <ScrollView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="0.3"-->
+<!--                    tools:ignore="SpeakableTextPresentCheck">-->
+<!--                    <ListView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"/>-->
+<!--                </ScrollView>-->
             </LinearLayout>
 
             <LinearLayout

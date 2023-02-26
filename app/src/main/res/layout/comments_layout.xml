@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+        <TextView
+            android:id="@+id/eachIp"
+            android:layout_width="match_parent"
+
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="5dp"
+            android:text="From 192.38.45.80"
+            android:textSize="17dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_weight="1"
+            android:paddingStart="5dp"
+            android:text="Nice Video!"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            android:id="@+id/eachComment"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
